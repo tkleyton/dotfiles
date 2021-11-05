@@ -40,6 +40,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'Yggdroot/indentLine'
 Plugin 'preservim/tagbar'
 Plugin 'severin-lemaignan/vim-minimap'
+Plugin 'frazrepo/vim-rainbow'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -69,8 +70,8 @@ syntax on
 colorscheme torte
 
 " Highlight cols > 80
-let &colorcolumn=join(range(81,999),',')
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
+" let &colorcolumn=join(range(81,999),',')
+" highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 " Set folding and open files with no folding
 set foldmethod=indent
@@ -92,3 +93,9 @@ vnoremap # :s/^/#<CR>
 
 " Map set/unset scrollbind for all windows
 nnoremap <F5> :windo set scrollbind!<CR>
+
+" Jedi Vim is freezing.
+let g:pymode_rope=0
+let g:pymode_folding=0
+
+let g:rainbow_active=1
