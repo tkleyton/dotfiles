@@ -41,6 +41,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'preservim/tagbar'
 Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'frazrepo/vim-rainbow'
+Plugin 'itchyny/lightline.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -99,3 +100,8 @@ let g:pymode_rope=0
 let g:pymode_folding=0
 
 let g:rainbow_active=1
+set laststatus=2
+set noshowmode
+if !has('gui_running')
+  set t_Co=256
+endif
