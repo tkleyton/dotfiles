@@ -42,6 +42,9 @@ Plugin 'preservim/tagbar'
 Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'frazrepo/vim-rainbow'
 Plugin 'itchyny/lightline.vim'
+Plugin 'preservim/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -105,3 +108,7 @@ set noshowmode
 if !has('gui_running')
   set t_Co=256
 endif
+
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
